@@ -9,8 +9,7 @@ namespace ValantDemoApi.Services
 {
   public class MazeService : IMazeService
   {
-    private const int DEFAULT_START_INDEX = 0;
-    private const int DEFAULT_SIZE = 30;
+    
     private readonly IMazeRepository _repository;
 
     public MazeService(IMazeRepository repository)
@@ -50,8 +49,8 @@ namespace ValantDemoApi.Services
     {
       if (totalItems < size || startIndex > totalItems)
       {
-        startIndex = DEFAULT_START_INDEX;
-        size = DEFAULT_SIZE;
+        startIndex = Constants.START_INDEX;
+        size = Constants.SIZE;
       }
     }
 
@@ -72,17 +71,17 @@ namespace ValantDemoApi.Services
       var rowIndex = position / columns;
       var columnIndex = position % columns;
 
-      EvaluateMove(maze, rowIndex - 1, columnIndex, ValantConstants.UP, moves);    // UP
-      EvaluateMove(maze, rowIndex + 1, columnIndex, ValantConstants.DOWN, moves);  // DOWN
-      EvaluateMove(maze, rowIndex, columnIndex - 1, ValantConstants.LEFT, moves);  // LEFT
-      EvaluateMove(maze, rowIndex, columnIndex + 1, ValantConstants.RIGHT, moves); // RIGHT
+      EvaluateMove(maze, rowIndex - 1, columnIndex, Constants.UP, moves);    // UP
+      EvaluateMove(maze, rowIndex + 1, columnIndex, Constants.DOWN, moves);  // DOWN
+      EvaluateMove(maze, rowIndex, columnIndex - 1, Constants.LEFT, moves);  // LEFT
+      EvaluateMove(maze, rowIndex, columnIndex + 1, Constants.RIGHT, moves); // RIGHT
 
       return moves;
     }
 
     private void EvaluateMove(IList<string> maze, int rowIndex, int columnIndex, string direction, IList<string> availableMoves)
     {
-      if (IsIndexWithinBounds(rowIndex, columnIndex, maze) && maze[rowIndex][columnIndex] != ValantConstants.WALL_CHAR)
+      if (IsIndexWithinBounds(rowIndex, columnIndex, maze) && maze[rowIndex][columnIndex] != Constants.WALL_CHAR)
       {
         availableMoves.Add(direction);
       }

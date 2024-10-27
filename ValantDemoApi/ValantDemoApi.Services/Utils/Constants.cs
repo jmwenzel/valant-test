@@ -1,6 +1,6 @@
 namespace ValantDemoApi.Services.Utils
 {
-  public static class ValantConstants
+  public static class Constants
   {
     public static char START_CHAR = 'S';
     public static char WALL_CHAR = 'X';
@@ -13,5 +13,8 @@ namespace ValantDemoApi.Services.Utils
     public const string DOWN = "DOWN";
     public const string LEFT = "LEFT";
     public const string RIGHT = "RIGHT";
+
+    public const int START_INDEX = 0;
+    public const int SIZE = 30;
   }
 }

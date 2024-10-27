@@ -21,7 +21,7 @@ namespace ValantDemoApi.Services
       var maxLineLength = mazeLines.Max(line => line.Length);
 
       mazeLines = mazeLines
-          .Select(line => line.PadRight(maxLineLength, ValantConstants.WALL_CHAR).ToUpper())
+          .Select(line => line.PadRight(maxLineLength, Constants.WALL_CHAR).ToUpper())
       .ToList();
 
       return await _mazeRepository.SaveMazeAsync(fileName, mazeLines);

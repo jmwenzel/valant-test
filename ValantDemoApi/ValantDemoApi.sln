@@ -11,9 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B09CF671-C2E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F3315EE3-C2A6-4D14-9446-27CC34CB1E78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValantDemoApi.Services", "ValantDemoApi.Services\ValantDemoApi.Services.csproj", "{31B062D2-28E4-4AA2-A177-07E13DA45505}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValantDemoApi.Services", "ValantDemoApi.Services\ValantDemoApi.Services.csproj", "{31B062D2-28E4-4AA2-A177-07E13DA45505}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValantDemoApi.Repository", "ValantDemoApi.Repository\ValantDemoApi.Repository.csproj", "{2E2A5E3C-AF54-4482-829B-0055759CA87C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValantDemoApi.Repository", "ValantDemoApi.Repository\ValantDemoApi.Repository.csproj", "{2E2A5E3C-AF54-4482-829B-0055759CA87C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValantDemoApi.Repository.Tests", "ValantDemoApi.Repository.Tests\ValantDemoApi.Repository.Tests.csproj", "{E912D930-DFD8-4208-87A7-8057D1C40638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValantDemoApi.Services.Tests", "ValantDemoApi.Services.Tests\ValantDemoApi.Services.Tests.csproj", "{7C98FC66-B3C7-43E3-9301-75DAE8282E27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,14 @@ Global
 		{2E2A5E3C-AF54-4482-829B-0055759CA87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E2A5E3C-AF54-4482-829B-0055759CA87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E2A5E3C-AF54-4482-829B-0055759CA87C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E912D930-DFD8-4208-87A7-8057D1C40638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E912D930-DFD8-4208-87A7-8057D1C40638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E912D930-DFD8-4208-87A7-8057D1C40638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E912D930-DFD8-4208-87A7-8057D1C40638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C98FC66-B3C7-43E3-9301-75DAE8282E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C98FC66-B3C7-43E3-9301-75DAE8282E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C98FC66-B3C7-43E3-9301-75DAE8282E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C98FC66-B3C7-43E3-9301-75DAE8282E27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +58,8 @@ Global
 		{6A587664-C6B8-42B6-94BC-65F1D88EE4A4} = {F3315EE3-C2A6-4D14-9446-27CC34CB1E78}
 		{31B062D2-28E4-4AA2-A177-07E13DA45505} = {B09CF671-C2E5-4032-8DE0-904C7E5E6A31}
 		{2E2A5E3C-AF54-4482-829B-0055759CA87C} = {B09CF671-C2E5-4032-8DE0-904C7E5E6A31}
+		{E912D930-DFD8-4208-87A7-8057D1C40638} = {F3315EE3-C2A6-4D14-9446-27CC34CB1E78}
+		{7C98FC66-B3C7-43E3-9301-75DAE8282E27} = {F3315EE3-C2A6-4D14-9446-27CC34CB1E78}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {091496D8-4BE7-445B-A1A2-C730A60A1FA4}

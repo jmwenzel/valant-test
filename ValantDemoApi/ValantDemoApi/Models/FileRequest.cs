@@ -31,7 +31,7 @@ namespace ValantDemoApi.Models.UploadMaze
           .WithMessage("The maze file cannot be empty. Please provide at least one maze line.");
 
       RuleForEach(r => r.MazeFile)
-          .Must(mazeLine => mazeLine.All(c => ValantConstants.ALLOWED_CHARS.Contains(c, StringComparison.InvariantCultureIgnoreCase)))
+          .Must(mazeLine => mazeLine.All(c => Constants.ALLOWED_CHARS.Contains(c, StringComparison.InvariantCultureIgnoreCase)))
           .WithMessage("Each line of the maze can only contain the following characters: 'S', 'O', 'X', and 'E'. Please review the input.");
     }
   }
