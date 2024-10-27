@@ -1,0 +1,17 @@
+<div class="maze-upload-container">
+    <form (ngSubmit)="handleGenerateClick()" #uploadForm="ngForm">
+      <div class="button-section">
+        <label for="mazeFile" class="file-upload-label">Upload Maze File:</label>
+        <input 
+          type="file" 
+          id="mazeFile" 
+          #fileInput 
+          (change)="onFileChange(fileInput.files)" 
+          accept=".txt" 
+          required
+        />
+        <button type="submit" [disabled]="!uploadForm.valid">Upload</button>
+      </div>
+    </form>
+  </div>
+  
