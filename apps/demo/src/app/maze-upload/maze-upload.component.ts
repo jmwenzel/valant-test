@@ -19,7 +19,7 @@ export class MazeUploadComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  async uploadMaze(files: FileList): Promise<void> {
+  async onFileChange(files: FileList): Promise<void> {
     this.resetState();
     if (files.length === 0) {
       this.showAlert('Select file to upload.', 'error-snackbar');

@@ -8,6 +8,8 @@ import { ValantDemoApiClient } from './api-client/api-client';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { MazeIndexComponent } from './maze-index/maze-index.component';
+import { MazeUploadComponent } from './maze-upload/maze-upload.component';
+import { MazeService } from './services/maze.service';
 
 export function getBaseUrl(): string {
   return environment.baseUrl;
@@ -17,7 +19,7 @@ const routes: Routes = [
   { path: '', component: MazeIndexComponent },
 ];
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MazeUploadComponent, MazeIndexComponent],
   imports: [
     BrowserModule, 
     FormsModule, 
@@ -26,9 +28,11 @@ const routes: Routes = [
   ],
   providers: [
     LoggingService,
+    MazeService,
     ValantDemoApiClient.Client,
     { provide: ValantDemoApiClient.API_BASE_URL, useFactory: getBaseUrl },
   ],
   bootstrap: [AppComponent],
+  exports: [RouterModule],
 })
 export class AppModule {}
