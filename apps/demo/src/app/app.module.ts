@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MazeIndexComponent } from './maze-index/maze-index.component';
 import { MazeUploadComponent } from './maze-upload/maze-upload.component';
 import { MazeService } from './services/maze.service';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 export function getBaseUrl(): string {
   return environment.baseUrl;
@@ -24,6 +25,7 @@ const routes: Routes = [
     BrowserModule, 
     FormsModule, 
     HttpClientModule,
+    MatSnackBarModule,
     RouterModule.forRoot(routes),
   ],
   providers: [
