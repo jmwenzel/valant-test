@@ -4,6 +4,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using ValantDemoApi.Repository;
+using ValantDemoApi.Repository.Interfaces;
+using ValantDemoApi.Services;
+using ValantDemoApi.Services.Interfaces;
 
 namespace ValantDemoApi
 {
@@ -20,6 +24,13 @@ namespace ValantDemoApi
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddCors();
+      // Add Repositorty
+      services.AddScoped<IMazeFileHandler, MazeFileHandler>();
+      services.AddScoped<IMazeRepository, MazeRepository>();
+      // Add Service
+      services.AddScoped<IMazeFileService, MazeFileService>();
+      services.AddScoped<IMazeService, MazeService>();
+
       services.AddControllers();
       services.AddSwaggerGen(c =>
       {
